@@ -1,0 +1,35 @@
+/* src/NavBar.css */
+.navbar {
+    background-color: #4caf50; /* Green background */
+    padding: 10px 20px; /* Space around the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: sticky; /* Keep navbar on top when scrolling */
+    top: 0; /* Align to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+  
+  .navbar ul {
+    list-style-type: none; /* Remove bullets */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center items */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+  
+  .navbar li {
+    margin: 0 20px; /* Space between items */
+  }
+  
+  .navbar a {
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition */
+  }
+  
+  .navbar a:hover {
+    color: #ffeb3b; /* Yellow on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
