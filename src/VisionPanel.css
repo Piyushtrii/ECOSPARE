@@ -1,0 +1,87 @@
+.vision-panel {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 50px 20px;
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100vh; /* Takes up full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Allows absolute positioning for controls */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.vision-panel-content {
+    margin-bottom: auto; /* Pushes the content to the top */
+}
+
+.vision-panel h2 {
+    font-size: 3em; /* Larger for full screen effect */
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.vision-panel p {
+    font-size: 1.3em;
+    margin: 20px 0;
+    color: #ecf0f1;
+}
+
+.vision-panel-controls {
+    position: absolute; /* Positions buttons at bottom corners */
+    bottom: 30px; /* Distance from bottom */
+    width: 100%; /* Full width to span across */
+    display: flex;
+    justify-content: space-between; /* Space buttons apart */
+    padding: 0 20px; /* Optional padding for sides */
+}
+
+.vision-panel-controls button {
+    background-color: #ffffff;
+    color: #27ae60;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.vision-panel-controls button:hover {
+    background-color: #27ae60;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #27ae60;
+}
+
+@media (max-width: 600px) {
+    .vision-panel h2 {
+        font-size: 2.5em;
+    }
+    .vision-panel p {
+        font-size: 1.1em;
+    }
+    .vision-panel-controls button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}

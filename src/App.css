@@ -9,10 +9,58 @@
   color: white; /* White text */
 }
 
-section {
-  padding: 20px; /* Space around sections */
+.vision-section {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  padding: 40px 20px;
+  max-width: 1200px; /* Optional: max width for larger screens */
+  margin: 0 auto; /* Center the section */
+}
+
+.e-waste-image {
+  flex: 1; /* Take up one part of the flex container */
+  max-width: 100%; /* Make sure it doesn't overflow */
+  height: 400px; /* Set a fixed height for the image */
+  object-fit: cover; /* Maintain aspect ratio while covering */
+  border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+.vision-text {
+  flex: 1; /* Take up one part of the flex container */
+  padding: 20px; /* Space around the text */
 }
 
 h2 {
   color: #4caf50; /* Green text for section headers */
+  font-size: 2em; /* Increase font size for headers */
+}
+
+p {
+  font-size: 1.2em; /* Increase font size for paragraph */
+  line-height: 1.6; /* Better line spacing for readability */
+}
+
+section {
+  padding: 20px; /* Space around sections */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vision-section {
+    flex-direction: column; /* Stacks the image and text on smaller screens */
+  }
+
+  .e-waste-image {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Allow height to adjust based on width */
+    margin-bottom: 20px; /* Space between image and text */
+  }
+
+  h2 {
+    font-size: 1.8em; /* Slightly smaller headings on mobile */
+  }
+
+  p {
+    font-size: 1em; /* Adjust paragraph font size on mobile */
+  }
 }
