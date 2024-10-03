@@ -1,38 +1,62 @@
 .vision-panel {
     background: linear-gradient(135deg, #2ecc71, #27ae60);
-    color: white;
+    color: rgb(38, 255, 53);
     padding: 50px 20px;
-    margin: 0;
+    margin: 0 auto; /* Center the panel */
     border-radius: 0;
-    width: 100%;
-    height: 100vh; /* Takes up full viewport height */
+    width: 80%; /* Use percentage for responsiveness */
+    max-width: 560px; /* Set a maximum width */
+    height: auto; /* Allow height to adjust based on content */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative; /* Allows absolute positioning for controls */
+    position: relative; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    text-align: center; 
+}
+
+.vision-panel img {
+    width: 75%; /* Ensure full width */
+    height: 80%; /* Increased height for the image */
+    aspect-ratio: 16 / 9; /* Crop to 16:9 aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio */
 }
 
 .vision-panel-content {
     margin-bottom: auto; /* Pushes the content to the top */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+    color: white; /* White text for contrast */
+    padding: 10px; /* Reduced padding around the text */
+    border-radius: 8px; /* Rounded corners for the text box */
 }
 
-.vision-panel h2 {
-    font-size: 3em; /* Larger for full screen effect */
-    margin-bottom: 20px;
-    color: #ffffff;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+/* Consolidated paragraph styles */
+.vision-panel p {
+    font-size: 1.3em; /* Adjusted font size */
+    margin: 20px 0; /* Adjusted margin to prevent overlap */
+    color: #E84476;
+    text-align: center; /* Center align text */
+}
+
+/* Larger paragraph for full screen effect */
+.vision-panel p.full-screen {
+    font-size: 2%; /* Larger for full screen effect */
+    margin-bottom: 80%; /* Adjusted margin to create space above controls */
+    color: #4dc5ce;
+    text-shadow: 2px 4px 6px rgb(0, 0, 0);
+    /*background-color: rgb(44, 44, 42);  Added yellow highlight */
 }
 
 .vision-panel p {
-    font-size: 1.3em;
-    margin: 20px 0;
-    color: #ecf0f1;
-}
+    font-size: 1em;
+    margin: 20px 0; /* Adjusted margin to prevent overlap */
+    color:#ff0f57;
+   /*background-color:#E6EFF4;*/
+   }
 
 .vision-panel-controls {
+    margin-top: 20px; /* Added margin to separate from paragraph */
     position: absolute; /* Positions buttons at bottom corners */
     bottom: 30px; /* Distance from bottom */
     width: 100%; /* Full width to span across */
@@ -42,20 +66,20 @@
 }
 
 .vision-panel-controls button {
-    background-color: #ffffff;
-    color: #27ae60;
+    background-color: #ff680a;
+    color: #ffffff;
     border: none;
     padding: 15px 30px;
     font-size: 1.1em;
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .vision-panel-controls button:hover {
-    background-color: #27ae60;
-    color: white;
+    background-color: #8bff18;
+    color: rgb(0, 0, 0);
     transform: translateY(-5px);
 }
 
@@ -83,5 +107,35 @@
     .vision-panel-controls button {
         padding: 10px 20px;
         font-size: 1em;
+    }
+}
+
+.step-image {
+    width: 60%; /* 20% smaller than the container */
+    height: 40%; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    margin: 0 auto; /* Center the image */
+}
+
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Add transition effects for smoother animations */
+.vision-panel, 
+.vision-panel img, 
+.vision-panel h2, 
+.vision-panel p, 
+.vision-panel-controls button {
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .vision-panel {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+        width: 90%; /* Increase width for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
     }
 }

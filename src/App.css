@@ -1,47 +1,79 @@
 /* src/App.css */
-.App {
-  text-align: center;
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif; /* Modern font */
+ background-color: #D4F2F4; /* White text for contrast */ /* Light background for contrast */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  color: #333; /* Dark text for readability */
 }
 
+/* App Header */
 .App-header {
   background-color: #282c34; /* Dark background */
   padding: 20px;
-  color: white; /* White text */
+  color: #74E7DA; /* White text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: center; /* Center text horizontally */
+  position: relative; /* Ensure positioning context */
+  top: 0; /* Align to the top */
+  width: 100%; /* Full width */
 }
 
+/* Vision Section */
 .vision-section {
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
   align-items: center; /* Aligns items vertically in the center */
   padding: 40px 20px;
   max-width: 1200px; /* Optional: max width for larger screens */
   margin: 0 auto; /* Center the section */
+  border-radius: 10px; /* Rounded corners */
+  background-color:#A4E2F9; /* White background for section */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
+/* Image Styles */
 .e-waste-image {
-  flex: 1; /* Take up one part of the flex container */
-  max-width: 100%; /* Make sure it doesn't overflow */
-  height: 400px; /* Set a fixed height for the image */
-  object-fit: cover; /* Maintain aspect ratio while covering */
-  border-radius: 10px; /* Optional: adds rounded corners */
+  flex: 1 1 300px; /* Allow the image to grow and shrink, with a minimum width */
+  max-width: 50%; /* Set the maximum width to 50% of the container */
+  height: auto; /* Allow height to adjust */
+  border-radius: 10px; /* Rounded corners */
 }
 
+/* Text Styles */
 .vision-text {
-  flex: 1; /* Take up one part of the flex container */
+  flex: 1 1 300px; /* Allow the text to grow and shrink, with a minimum width */
   padding: 20px; /* Space around the text */
+  text-align: center; /* Center text */
 }
 
 h2 {
   color: #4caf50; /* Green text for section headers */
-  font-size: 2em; /* Increase font size for headers */
+  font-size: 2.5em; /* Slightly smaller for modern look */
+  margin-bottom: 20px; /* Space below header */
 }
 
 p {
-  font-size: 1.2em; /* Increase font size for paragraph */
-  line-height: 1.6; /* Better line spacing for readability */
+  font-size: 1.1em; /* Adjusted font size */
+  line-height: 1.8; /* Better line spacing */
+  margin-bottom: 20px; /* Space below paragraph */
 }
 
 section {
   padding: 20px; /* Space around sections */
+}
+
+/* Centered Section for Our Vision */
+#vision {
+  text-align: center; /* Center text */
+  padding: 20px; /* Space around the section */
+}
+
+/* Centered Section for Contact Us */
+#contact {
+  text-align: center; /* Center text */
+  padding: 20px; /* Space around the section */
 }
 
 /* Responsive adjustments */

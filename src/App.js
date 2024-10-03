@@ -25,15 +25,15 @@ function App() {
         </div>
       </section>
 
-      <section id="vision">
+      <section id="vision" className="centered-section">
         <h2>Our Vision</h2>
         <VisionPanel /> {/* Render VisionPanel */}
       </section>
 
-      <section id="contact">
+      <section id="contact" className="centered-section">
         <h2>Contact Us</h2>
-        <p>Email: info@ecospare.com</p>
-        <p>Phone: +1 234 567 890</p>
+        <p>Email: getecospare@gmail.com</p> {/* Updated email */}
+        <p>Phone: +917061666450</p> {/* Updated phone number */}
       </section>
     </div>
   );
